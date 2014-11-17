@@ -1,0 +1,2 @@
+serviceClass: com.atal.bookameme.client.GreetingService
+path: 360367882BE453B38A54373313D1A3AF.gwt.rpc

@@ -1,0 +1,3 @@
+# Module bookameme
+# RPC service class, partial path of RPC policy file
+com.atal.bookameme.client.GreetingService, 360367882BE453B38A54373313D1A3AF.gwt.rpc
