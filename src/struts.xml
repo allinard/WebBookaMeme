@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="default" extends="struts-default" namespace="/">
+
+		<interceptors>
+			<interceptor name="gaeFileUploadInterceptor"
+				class="com.struts2.gae.interceptor.GaeFileUploadInterceptor" />
+			<interceptor-stack name="fileUploadStack">
+				<interceptor-ref name="gaeFileUploadInterceptor"></interceptor-ref>
+				<interceptor-ref name="basicStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="fileUploadStack" />
+
+
+		<default-action-ref name="login" />
+		<action name="login" class="com.atal.bookameme.action.LoginAction">
+			<result name="success">index.jsp</result>
+		</action>
+		<!-- 
+		<action name="liste" class="com.nantalertes.action.ListeAction">
+			<result name="success">liste.jsp</result>
+			<result name="error">index.jsp</result>
+		</action>
+		<action name="add" class="com.nantalertes.action.AddAction">
+			<result name="success">add.jsp</result>
+			<result name="error">index.jsp</result>
+			<result name="stored" type="redirectAction">liste</result>
+		</action>
+		<action name="map" class="com.nantalertes.action.MapAction">
+			<result name="success">map.jsp</result>
+			<result name="error">index.jsp</result>
+		</action>
+		<action name="delete" class="com.nantalertes.action.DeleteAction">
+			<result name="success" type="redirectAction">liste</result>
+		</action>
+		<action name="account" class="com.nantalertes.action.AccountAction">
+			<result name="success">account.jsp</result>
+		</action>
+		<action name="about" class="com.nantalertes.action.AboutAction">
+			<result name="success">about.jsp</result>
+		</action>
+		<action name="mail" class="com.nantalertes.scheduled.MailSender">
+			<result name="success">index.jsp</result>
+		</action>
+		<action name="like" class="com.nantalertes.action.LikeAction">
+			<result name="liste" type="redirectAction">liste</result>
+			<result name="add" type="redirectAction">add</result>
+			<result name="map" type="redirectAction">map</result>
+		</action>
+		 -->
+	</package>
+
+</struts>
