@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+
+    <title>Book à Mémé</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body onload="document.getElementById('basicMap').style.height=((document.getElementById('sidebar').offsetHeight-document.getElementById('navbar').offsetHeight)+'px');init();" onresize="document.getElementById('basicMap').style.height=((document.getElementById('sidebar').offsetHeight-document.getElementById('navbar').offsetHeight)+'px');">
+
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="box-shadow: -5px 5px 8px grey;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="map.html" style="color:white;"><strong>Book à Mémé</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+		  
+          <form class="navbar-form navbar-right">
+		    <button type="button" class="btn btn-success">Connexion</button>
+            <!--<input type="text" class="form-control" placeholder="Search...">-->
+          </form>
+		  
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active_link" ><a href="planning.html">Planning des Repas</a></li>
+          </ul>
+		  
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+		<div class="page-header">
+			<h1>Planning des Repas</h1>
+		</div>
+
+
+		<div>
+			<center>
+			<ul class="pagination">
+				<li><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
+				<li><a href="#">Planning du 24/11 au 30/11</a></li>
+				<li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
+			  </ul>
+			  </center>
+		</div>
+
+
+
+		<div>
+			<ul class="nav nav-tabs">
+			  <li role="presentation" class="active"><a data-toggle="tab" href="#lundi">Lundi 24</a></li>
+			  <li role="presentation"><a data-toggle="tab" href="#mardi">Mardi 25</a></li>
+			  <li role="presentation"><a data-toggle="tab" href="#mercredi">Mercredi 26</a></li>
+			  <li role="presentation"><a data-toggle="tab" href="#jeudi">Jeudi 27</a></li>
+			  <li role="presentation"><a data-toggle="tab" href="#vendredi">Vendredi 28</a></li>
+			  <li role="presentation"><a data-toggle="tab" href="#samedi">Samedi 29</a></li>
+			  <li role="presentation"><a data-toggle="tab" href="#dimanche">Dimanche 30</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="tab-pane active in" id="lundi">
+					<h4>
+						Petit Déjeuner &nbsp;
+						<a href="#" title="Modifier à la main">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+								<h3 class="panel-title">Boissons</h3>
+							  </div>
+							  <div class="panel-body">
+								Items ...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+								<h3 class="panel-title">Accompagnements</h3>
+							  </div>
+							  <div class="panel-body">
+								Items ...
+							  </div>
+							</div>
+						</div>
+					</div>
+					<hr>
+
+					
+					<h4>
+						Déjeuner &nbsp;
+						<a href="#" title="Modifier à la main">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+								<h3 class="panel-title">Entrée</h3>
+							  </div>
+							  <div class="panel-body">
+								Items ...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+								<h3 class="panel-title">Plat de Résistance</h3>
+							  </div>
+							  <div class="panel-body">
+								Items ...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body">
+								Items ...
+							  </div>
+							</div>
+						</div>
+					</div>
+					<hr>
+
+					<h4>
+						Diner &nbsp;
+						<a href="#" title="Modifier à la main">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+								<h3 class="panel-title">Entrée</h3>
+							  </div>
+							  <div class="panel-body">
+								Items ...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+								<h3 class="panel-title">Plat de Résistance</h3>
+							  </div>
+							  <div class="panel-body">
+								Items ...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body">
+								Items ...
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="tab-pane" id="mardi">
+					nyahhh2
+				</div>
+
+				<div class="tab-pane" id="mercredi">
+					nyahhh3
+				</div>
+
+				<div class="tab-pane" id="jeudi">
+					nyahhh4
+				</div>
+
+				<div class="tab-pane" id="vendredi">
+					nyahhh5
+				</div>
+
+				<div class="tab-pane" id="samedi">
+					nyahhh6
+				</div>
+
+				<div class="tab-pane" id="dimanche">
+					nyahhh7
+				</div>
+			</div>
+		</div>
+
+
+
+
+    </div>
+
+
+
+<a href="#" data-toggle="modal" data-target="#myModal">
+  Plop
+</a>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Signaler un probl&egrave;me</h4>
+      </div>
+      <div class="modal-body">
+        Afin d'ajouter un alerte, vous devez vous connecter
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-default" data-dismiss="modal">Fermer</a>
+		<a href="#" class="btn btn-success">Se Connecter</a>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+	
+<script type="text/javascript">
+    function getfile(){
+        document.getElementById('hiddenfile').click();
+    }
+    function getvalue(){
+        document.getElementById('selectedfile').innerHTML=document.getElementById('hiddenfile').value;
+    }
+</script>
+  </body>
+</html>
