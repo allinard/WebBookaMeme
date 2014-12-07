@@ -23,6 +23,12 @@
 		<action name="login" class="com.atal.bookameme.action.LoginAction">
 			<result name="success">index.jsp</result>
 		</action>
+		<action name="gestionAlimentsExclus" class="com.atal.bookameme.action.GestionAlimentsExclusAction">
+			<result name="success">gestionAlimentsExclus.jsp</result>
+		</action>
+		<action name="gestionProfilNutri" class="com.atal.bookameme.action.GestionProfilNutriAction">
+			<result name="success">gestionProfilNutri.jsp</result>
+		</action>
 		<!-- 
 		<action name="liste" class="com.nantalertes.action.ListeAction">
 			<result name="success">liste.jsp</result>
