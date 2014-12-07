@@ -104,16 +104,7 @@ body {
 	height: 60px;
 	margin-bottom:30px;
 }
-.active:after{
-	position: absolute;
-	content:"";
-	width:0;
-	height:0;
-    border-top:10px solid rgb(33,77,116);
-    border-bottom:10px solid transparent;
-    border-left:10px solid rgb(33,77,116);
-    border-right:10px solid transparent;
-}
+
 .olControlAttribution {
 
  display: none;
@@ -164,14 +155,14 @@ color: white;
 }
 /*
 inondations 
-des débris sur la voie publique
+des dÃ©bris sur la voie publique
 tags/craffiti
 probleme signalisations
 - panneaux
 - feux
-éclairage public
-chaussé endommagé
-arrêt bus/tram déterioré
+Ã©clairage public
+chaussÃ© endommagÃ©
+arrÃªt bus/tram dÃ©teriorÃ©
  
 
 
@@ -189,11 +180,63 @@ background-image = none;
 
 
 
+.olPopupContent {
+    overflow: visible !important;
+    padding: 0 !important;
+}
+.olPopup {
+    z-index: 1005 !important;
+}
+.olwidgetPopupContent {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 1.2em 1.2em 1.2em 1.2em;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.35);
+    overflow: auto;
+    padding: 10px 8px 8px;
+}
+.olwidgetPopupCloseBox {
+    background: url("img/popup_icons.png") no-repeat scroll -80px 0 #FFFFFF;
+    cursor: pointer;
+    height: 0;
+    overflow: hidden;
+    padding-top: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 16px;
+}
+.olwidgetPopupCloseBox:hover {
+    background-position: -64px 0;
+}
+.olwidgetPopupStemTL,.olwidgetPopupStemTR {
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: none repeat scroll 0 0 #FFFFFF;
+    z-index: 1;
+}
+
+.olwidgetPopupStemBL,.olwidgetPopupStemBR {
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: none repeat scroll 0 0 #FFFFFF;
+    z-index: 1;
+}
 
 
-
-
-
+.tab-content{
+	border-left: solid rgb(220,220,220) 1px;
+	border-right: solid rgb(220,220,220) 1px;
+	border-bottom: solid rgb(220,220,220) 1px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 20px;
+}
 
 
 
