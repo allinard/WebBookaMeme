@@ -50,19 +50,11 @@
 
     <div class="container">
 		<div class="page-header">
-			<h1>Bienvenue sur <img src="img/logo2.png" height="67px" style="margin-top:-6px;"></h1>
+			<h1>Bienvenue sur Book à Mémé!<!-- <img src="img/logo2.png" height="67px" style="margin-top:-6px;"> --></h1>
 		</div>
 		<div class="lead">
-			Un probl&egrave;me dans votre rue ?
-			Personne ne s'en occupe ?
-			<br>
-			<i>(chauss&eacute;e endommag&eacute;e, signalisation d&eacute;faillante, d&eacute;t&eacute;rioration diverse, ...)</i>
-			<br>
-			<br>
-			Gr&acirc;ce &agrave; Nant' Alertes, vous pouvez &agrave; pr&eacute;sent signaler les probl&egrave;mes que vous avez rencontr&eacute;s dans l'agglom&eacute;ration Nantaise
-			pour qu'ils soient regl&eacute;s au plus vite.
-			<br>
-			<br>
+			Envie de manger équilibré ?
+			Bienvenue sur Book à Mémé!
 		</div>
 		<p>
 			<center>
@@ -81,12 +73,12 @@
 				<p></p>
 				<br>
 				<br>
-				Il faut &ecirc;tre connect&eacute; pour poster une alerte.
+				Il faut &ecirc;tre connect&eacute; pour utiliser le site.
 			<center>
 			<br>
 			<hr>
-			Adeline GRANET, Alexis LINARD, Carl GOUBEAU - <a href="http://www.dpt-info.univ-nantes.fr/1326208903095/0/fiche___pagelibre/" target="_blank">Master ATAL</a> - <a href="http://univ-nantes.fr" target="_blank">Universit&eacute; de Nantes</a><br>
-			Code source de l'application disponible sur <a href="https://github.com/allinard/appliWeb">GitHub</a>
+			<a href="http://www.dpt-info.univ-nantes.fr/1326208903095/0/fiche___pagelibre/" target="_blank">Master 2 ATAL</a> - <a href="http://univ-nantes.fr" target="_blank">Universit&eacute; de Nantes</a><br>
+			Code source de l'application disponible sur <a href="https://github.com/allinard/WebBookaMeme">GitHub</a>
 		</p>
     </div>
 

@@ -1,0 +1,51 @@
+café 
+chocolat 
+thé
+fruit 
+yaourt 
+céréales
+viennoiserie
+pain
+pates carbonara
+pates bolognaise
+pate au pesto
+tarte à la tomate
+quiche 
+tourte au poulet et petits pois
+fondue de poireau
+rizotto de champignon
+crevette au curry 
+endives au jambon 
+tomates farcies 
+hachis parmentier 
+filet mignon aux champignons/riz 
+soupes 
+croque-monsieur/salade 
+saumon grille/epinards 
+carry saucisse/riz
+saucisse/puree 
+steak/pdt/salade tomates 
+merlan/lait coco/tomates 
+cabillaud en papillote avec poireaux et carotte/riz 
+cordon bleu/pates 
+poulet roti/pdt eau/salade 
+curry porc au lait de coco /riz 
+oeufs a la coque 
+hamburger maison 
+omelette 
+flamiche aux poireaux 
+saint-jacques/fondue de poireaux 
+cotes porc/flan courgettes 
+tranches gigot/flageolets/haricots vert 
+canard aux olives/riz 
+canard/semoule 
+filet dinde a la creme/pates 
+soles meunieres/ecrasee pdt 
+salade composee 
+moussaka 
+lasagnes 
+crêpes au jambon 
+tartiflette 
+raclette 
+pates/boulette 
+roti de veau/petits pois carottes 
