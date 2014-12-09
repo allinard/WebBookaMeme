@@ -41,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="map.html" style="color:white;"><strong>Book à Mémé</strong></a>
+          <a class="navbar-brand" href="planning.html" style="color:white;"><strong>Book à Mémé</strong></a>
         </div>
         <div class="navbar-collapse collapse">
 		  
@@ -73,21 +73,25 @@
 		</div>
 		
 		<div>
-			<s:form action="gestionProfilNutri.action" method="post" cssClass="navbar-form" theme="simple">
+			<s:form action="saveProfilNutri" cssClass="navbar-form" theme="simple">
 			
 			<ul>
+			<!-- 
 				<li>Allergies : <s:select list="listeAlergies" name="alergie" cssClass="form-control" label="Allergies" labelposition="top" labelSeparator=""/></li>
+			 -->
+				<li>Allergies : <s:textfield name="alergie" id="alergie"/> </li>
+				
 				<li>Aliments exclus &nbsp; <a href="gestionAlimentsExclus.action" class="btn btn-success">Modifier</a></li>
 				
 				<li>Pr&eacute;f&eacute;rences <s:select list="listePreferences" name="preferences" cssClass="form-control" label="Preferences" labelposition="top" labelSeparator=""/></li>
-				<li>Motivations<s:select list="listeMotivations" name="motivation" cssClass="form-control" label="Motivations" labelposition="top" labelSeparator=""/></li>
+				<li>Motivations<s:select list="listeMotivations" name="motivations" cssClass="form-control" label="Motivations" labelposition="top" labelSeparator=""/></li>
 			</ul>
 			
 			<p>&nbsp;</p>
 			
 			<br>
 			
-			<s:submit method="save" value="Enregistrer" align="center" cssClass="btn btn-success" />
+			<s:submit value="Enregistrer" align="center" cssClass="btn btn-success" />
 			
 			</s:form>
 		</div>

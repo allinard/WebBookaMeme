@@ -8,7 +8,7 @@ import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserServiceFactory;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class GestionProfilNutriAction extends ActionSupport {
+public class SaveProfilNutriAction extends ActionSupport {
 	
 	/**
 	 * 
@@ -37,14 +37,17 @@ public class GestionProfilNutriAction extends ActionSupport {
 		ProfilNutri profilNutri;
 		try{
 			profilNutri = ProfilNutriDAO.getProfilNutriByUser(user.toString()).get(0);
-			setAlergie(profilNutri.getAlergie());
-			setPreferences(profilNutri.getPreferences());
-			setMotivations(profilNutri.getMotivations());
 		}
 		catch(Exception e){
 			profilNutri = new ProfilNutri();
 			profilNutri.setUser(user.toString());
 		}
+		
+		profilNutri.setAlergie(alergie);
+		profilNutri.setPreferences(preferences);
+		profilNutri.setMotivations(motivations);
+		
+		ProfilNutriDAO.createOrUpdateProfilNutri(profilNutri);
 
 		return "success";
 	}

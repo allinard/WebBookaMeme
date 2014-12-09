@@ -6,7 +6,7 @@ import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserServiceFactory;
 import com.opensymphony.xwork2.ActionSupport;
 
-public class GestionAlimentsExclusAction extends ActionSupport{
+public class SaveAlimentsExclusAction extends ActionSupport{
 
 	
 	private User user;
@@ -34,30 +34,33 @@ public class GestionAlimentsExclusAction extends ActionSupport{
 		ProfilNutri profilNutri;
 		try{
 			profilNutri = ProfilNutriDAO.getProfilNutriByUser(user.toString()).get(0);
-			setHuitres(profilNutri.getHuitres().equals("O")?true:false);
-			setMoules(profilNutri.getMoules().equals("O")?true:false);
-			setMorue(profilNutri.getMorue().equals("O")?true:false);
-			setBle(profilNutri.getBle().equals("O")?true:false);
-			setPorcorc(profilNutri.getPorcorc().equals("O")?true:false);
-			setViande(profilNutri.getViande().equals("O")?true:false);
-			setAnimal(profilNutri.getAnimal().equals("O")?true:false);
-			setFruitsmer(profilNutri.getFruitsmer().equals("O")?true:false);
-			setPoissons(profilNutri.getPoissons().equals("O")?true:false);
-			setFruits(profilNutri.getFruits().equals("O")?true:false);
-			setLegumes(profilNutri.getLegumes().equals("O")?true:false);
-			setFruitscoque(profilNutri.getFruitscoque().equals("O")?true:false);
 		}
 		catch(Exception e){
 			profilNutri = new ProfilNutri();
 			profilNutri.setUser(user.toString());
 		}
 		
+		profilNutri.setAnimal(isAnimal()?"O":"N");
+		profilNutri.setBle(isBle()?"O":"N");
+		profilNutri.setFruits(isFruits()?"O":"N");
+		profilNutri.setFruitscoque(isFruitscoque()?"O":"N");
+		profilNutri.setFruitsmer(isFruitsmer()?"O":"N");
+		profilNutri.setHuitres(isHuitres()?"O":"N");
+		profilNutri.setLegumes(isLegumes()?"O":"N");
+		profilNutri.setMorue(isMorue()?"O":"N");
+		profilNutri.setMoules(isMoules()?"O":"N");
+		profilNutri.setPoissons(isPoissons()?"O":"N");
+		profilNutri.setPorcorc(isPorcorc()?"O":"N");
+		profilNutri.setViande(isViande()?"O":"N");
+		
+		ProfilNutriDAO.createOrUpdateProfilNutri(profilNutri);
+		
 		
 		return "success";
 	}
 	
 	
-
+	
 	
 	public User getUser() {
 		return user;

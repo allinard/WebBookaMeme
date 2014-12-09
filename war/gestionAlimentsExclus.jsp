@@ -42,7 +42,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="map.html" style="color:white;"><strong>Book à Mémé</strong></a>
+          <a class="navbar-brand" href="planning.html" style="color:white;"><strong>Book à Mémé</strong></a>
         </div>
         <div class="navbar-collapse collapse">
 		  
@@ -74,28 +74,28 @@
 		</div>
 		
 		<div>
-			<s:form action="gestionAlimentsExclus.action" method="post" cssClass="navbar-form" theme="simple">
+			<s:form action="saveAlimentsExclus" method="post" cssClass="navbar-form" theme="simple">
 			
 			<ul>
-				<li>Huitres <s:checkbox name="huitres" fieldValue="false" label="Huitres"/></li>
-				<li>Moules <s:checkbox name="moules" fieldValue="false" label="Moules"/></li>
-				<li>Morue <s:checkbox name="morue" fieldValue="false" label="Morue"/></li>
-				<li> Blé (gluten) <s:checkbox name="ble" fieldValue="false" label="Gluten"/></li>
-				<li> Porc <s:checkbox name="porcorc" fieldValue="false" label="Porc"/></li>
-				<li> Viande <s:checkbox name="viande" fieldValue="false" label="Viande"/></li>
-				<li> Animal <s:checkbox name="animal" fieldValue="false" label="Animal"/></li>
-				<li> Fruits de mer <s:checkbox name="fruitmer" fieldValue="false" label="Fruits de mer"/></li>
-				<li> Poissons <s:checkbox name="poissons" fieldValue="false" label="Poissons"/></li>
-				<li> Fruits <s:checkbox name="fruits" fieldValue="false" label="Fruits"/></li>
-				<li> Legumes <s:checkbox name="legumes" fieldValue="false" label="Legumes"/></li>
-				<li> Fruits a coque <s:checkbox name="fruitscoque" fieldValue="false" label="Fruits a coque"/></li>
+				<li>Huitres <s:checkbox name="huitres" label="Huitres"/></li>
+				<li>Moules <s:checkbox name="moules" label="Moules"/></li>
+				<li>Morue <s:checkbox name="morue" label="Morue"/></li>
+				<li> Blé (gluten) <s:checkbox name="ble" label="Gluten"/></li>
+				<li> Porc <s:checkbox name="porcorc" label="Porc"/></li>
+				<li> Viande <s:checkbox name="viande" label="Viande"/></li>
+				<li> Animal <s:checkbox name="animal" label="Animal"/></li>
+				<li> Fruits de mer <s:checkbox name="fruitmer" label="Fruits de mer"/></li>
+				<li> Poissons <s:checkbox name="poissons" label="Poissons"/></li>
+				<li> Fruits <s:checkbox name="fruits" label="Fruits"/></li>
+				<li> Legumes <s:checkbox name="legumes" label="Legumes"/></li>
+				<li> Fruits a coque <s:checkbox name="fruitscoque" label="Fruits a coque"/></li>
 			</ul>
 			
 			<p>&nbsp;</p>
 			
 			<br>
 			
-			<s:submit method="save" value="Enregistrer" align="center" cssClass="btn btn-success" />
+			<s:submit value="Enregistrer" align="center" cssClass="btn btn-success" />
 			
 			</s:form>
 		</div>
