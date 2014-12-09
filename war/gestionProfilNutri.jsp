@@ -30,30 +30,89 @@
 </head>
 
 
-<body>
+  <body onload="document.getElementById('basicMap').style.height=((document.getElementById('sidebar').offsetHeight-document.getElementById('navbar').offsetHeight)+'px');init();" onresize="document.getElementById('basicMap').style.height=((document.getElementById('sidebar').offsetHeight-document.getElementById('navbar').offsetHeight)+'px');">
+
+    <div id="navbar" class="navbar navbar-inverse navbar-fixed-top" role="navigation" style="box-shadow: -5px 5px 8px grey;">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="map.html" style="color:white;"><strong>Book à Mémé</strong></a>
+        </div>
+        <div class="navbar-collapse collapse">
+		  
+          <form class="navbar-form navbar-right">
+		    <button type="button" class="btn btn-success">Connexion</button>
+            <!--<input type="text" class="form-control" placeholder="Search...">-->
+          </form>
+		  
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="planning.html">Planning des Repas</a></li>
+            <li class="active_link"><a href="gestionProfilNutri.action">Profil Nutritionnel</a></li>
+          </ul>
+		  
+        </div>
+
+      </div>
+    </div>
 
 
-<h2>Gestion du profil nutritionnel</h2>
 
-<p>Veuillez renseigner vos pr&eacute;f&eacute;rences et donn&eacute;es nutritionnelles :</p>
 
-<s:form action="gestionProfilNutri.action" method="post" cssClass="navbar-form" theme="simple">
+    <div class="container">
+		<div class="page-header">
+			<h1>Gestion du profil nutritionnel</h1>
+		</div>
+		
+		<div>
+			<h4>Veuillez renseigner vos pr&eacute;f&eacute;rences et donn&eacute;es nutritionnelles :</h4>
+		</div>
+		
+		<div>
+			<s:form action="gestionProfilNutri.action" method="post" cssClass="navbar-form" theme="simple">
+			
+			<ul>
+				<li>Allergies : <s:select list="listeAlergies" name="alergie" cssClass="form-control" label="Allergies" labelposition="top" labelSeparator=""/></li>
+				<li>Aliments exclus &nbsp; <a href="gestionAlimentsExclus.action" class="btn btn-success">Modifier</a></li>
+				
+				<li>Pr&eacute;f&eacute;rences <s:select list="listePreferences" name="preferences" cssClass="form-control" label="Preferences" labelposition="top" labelSeparator=""/></li>
+				<li>Motivations<s:select list="listeMotivations" name="motivation" cssClass="form-control" label="Motivations" labelposition="top" labelSeparator=""/></li>
+			</ul>
+			
+			<p>&nbsp;</p>
+			
+			<br>
+			
+			<s:submit method="save" value="Enregistrer" align="center" cssClass="btn btn-success" />
+			
+			</s:form>
+		</div>
+		
+	</div>
 
-<ul>
-	<li>Allergies : <s:select list="listeAlergies" name="alergie" cssClass="form-control" label="Allergies" labelposition="top" labelSeparator=""/></li>
-	<li>Aliments exclus<a href="gestionAlimentsExclus.action" class="btn btn-success">Modifier</a></li>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
 	
-	<li>Pr&eacute;f&eacute;rences <s:select list="listePreferences" name="preferences" cssClass="form-control" label="Preferences" labelposition="top" labelSeparator=""/></li>
-	<li>Motivations<s:select list="listeMotivations" name="motivation" cssClass="form-control" label="Motivations" labelposition="top" labelSeparator=""/></li>
-</ul>
+<script type="text/javascript">
+    function getfile(){
+        document.getElementById('hiddenfile').click();
+    }
+    function getvalue(){
+        document.getElementById('selectedfile').innerHTML=document.getElementById('hiddenfile').value;
+    }
+</script>
 
-<p>&nbsp;</p>
 
-<br>
-
-<s:submit method="save" value="Enregistrer" align="center" cssClass="btn btn-success" />
-
-</s:form>
 
 </body>
 </html>

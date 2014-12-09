@@ -40,6 +40,12 @@ public class GestionProfilNutriAction extends ActionSupport {
 			profilNutri = new ProfilNutri();
 			profilNutri.setUser(user.toString());
 		}
+		
+		profilNutri.setAlergie(alergie);
+		profilNutri.setPreferences(preferences);
+		profilNutri.setMotivations(motivations);
+		
+		ProfilNutriDAO.createOrUpdateProfilNutri(profilNutri);
 
 		return "success";
 	}
@@ -51,7 +57,7 @@ public class GestionProfilNutriAction extends ActionSupport {
 		if(null==user){
 			user = new User("masterAtal@gmail.com", "gmail");
 		}
-		
+
 		ProfilNutri profilNutri;
 		try{
 			profilNutri = ProfilNutriDAO.getProfilNutriByUser(user.toString()).get(0);
@@ -67,7 +73,7 @@ public class GestionProfilNutriAction extends ActionSupport {
 		
 		ProfilNutriDAO.createOrUpdateProfilNutri(profilNutri);
 		
-		return "success";
+		return "saved";
 	}
 	
 	

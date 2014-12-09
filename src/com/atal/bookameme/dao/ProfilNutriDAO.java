@@ -115,6 +115,8 @@ public class ProfilNutriDAO {
 	
 	
 	public static void createOrUpdateProfilNutri(ProfilNutri profilNutri) {
+		System.out.println("CU PN");
+		System.out.println(profilNutri.toString());
 		Entity storedProfilNutri = getEntity(profilNutri);
 		// create
 		if (storedProfilNutri == null) {

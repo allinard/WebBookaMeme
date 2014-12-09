@@ -52,18 +52,32 @@ public class GestionAlimentsExclusAction extends ActionSupport{
 			profilNutri.setUser(user.toString());
 		}
 		
+		profilNutri.setAnimal(isAnimal()?"O":"N");
+		profilNutri.setBle(isBle()?"O":"N");
+		profilNutri.setFruits(isFruits()?"O":"N");
+		profilNutri.setFruitscoque(isFruitscoque()?"O":"N");
+		profilNutri.setFruitsmer(isFruitsmer()?"O":"N");
+		profilNutri.setHuitres(isHuitres()?"O":"N");
+		profilNutri.setLegumes(isLegumes()?"O":"N");
+		profilNutri.setMorue(isMorue()?"O":"N");
+		profilNutri.setMoules(isMoules()?"O":"N");
+		profilNutri.setPoissons(isPoissons()?"O":"N");
+		profilNutri.setPorcorc(isPorcorc()?"O":"N");
+		profilNutri.setViande(isViande()?"O":"N");
+		
+		ProfilNutriDAO.createOrUpdateProfilNutri(profilNutri);
+		
 		
 		return "success";
 	}
 	
 	
 	public String save(){
-		
 		user = UserServiceFactory.getUserService().getCurrentUser();
 		if(null==user){
 			user = new User("masterAtal@gmail.com", "gmail");
 		}
-		
+
 		ProfilNutri profilNutri;
 		try{
 			profilNutri = ProfilNutriDAO.getProfilNutriByUser(user.toString()).get(0);
@@ -88,7 +102,8 @@ public class GestionAlimentsExclusAction extends ActionSupport{
 		
 		ProfilNutriDAO.createOrUpdateProfilNutri(profilNutri);
 		
-		return "success";
+		
+		return "saved";
 	}
 	
 	

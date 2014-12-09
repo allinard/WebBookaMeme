@@ -21,13 +21,15 @@
 
 		<default-action-ref name="login" />
 		<action name="login" class="com.atal.bookameme.action.LoginAction">
-			<result name="success">index.jsp</result>
+			<result name="success">planning.html</result>
 		</action>
 		<action name="gestionAlimentsExclus" class="com.atal.bookameme.action.GestionAlimentsExclusAction">
 			<result name="success">gestionAlimentsExclus.jsp</result>
+			<result name="saved" type="redirectAction">gestionProfilNutri</result>
 		</action>
 		<action name="gestionProfilNutri" class="com.atal.bookameme.action.GestionProfilNutriAction">
 			<result name="success">gestionProfilNutri.jsp</result>
+			<result name="saved" type="redirectAction">login</result>
 		</action>
 		<!-- 
 		<action name="liste" class="com.nantalertes.action.ListeAction">

@@ -246,4 +246,28 @@ public class ProfilNutri implements Comparable<ProfilNutri>{
 		this.user = user;
 	}
 	
+	@Override
+	public String toString(){
+		StringBuffer s = new StringBuffer();
+		
+		s.append("id="+id+"\n"+"-");
+		s.append("user="+user+"-");
+		s.append("alergie="+alergie+"-");
+		s.append("preferences="+preferences+"-");
+		s.append("motivations="+motivations+"-");
+		s.append("huitres="+huitres+"-");
+		s.append("moules="+moules+"-");
+		s.append("morue="+morue+"-");
+		s.append("ble="+ble+"-");
+		s.append("porcorc="+porcorc+"-");
+		s.append("viande="+viande+"-");
+		s.append("animal="+animal+"-");
+		s.append("fruitsmer="+fruitsmer+"-");
+		s.append("poissons="+poissons+"-");
+		s.append("fruits="+fruits+"-");
+		s.append("legumes="+legumes+"-");
+		s.append("fruitscoque="+fruitscoque);
+		
+		return s.toString();
+	}
 }
