@@ -65,7 +65,7 @@ import java.io.IOException;
  * A TemplateElement representing a block of plain text.
  * 
  * @version $Id: TextBlock.java,v 1.17 2004/01/06 17:06:42 szegedia Exp $
- */
+ *//*
 public final class TextBlock extends TemplateElement {
 	private static final char[] EMPTY_CHAR_ARRAY = new char[0];
 	static final TextBlock EMPTY_BLOCK = new TextBlock(EMPTY_CHAR_ARRAY, false);
@@ -89,13 +89,13 @@ public final class TextBlock extends TemplateElement {
 		this.text = text;
 		this.unparsed = unparsed;
 	}
-
+*/
 	/**
 	 * Simply outputs the text.
-	 */
+	 *//*
 	public void accept(Environment env) throws IOException {
 		env.getOut().write(text);
-	}
+	}*/
 
 /*	public String getCanonicalForm() {
 		String text = new String(this.text);
@@ -117,7 +117,7 @@ public final class TextBlock extends TemplateElement {
 		}
 		return "text block (" + s + ")";
 	}
-*/
+*//*
 	TemplateElement postParseCleanup(boolean stripWhitespace) {
 		if (text.length == 0)
 			return this;
@@ -149,12 +149,12 @@ public final class TextBlock extends TemplateElement {
 		}
 		return this;
 	}
-
+*/
 	/**
 	 * Scans forward the nodes on the same line to see whether there is a
 	 * deliberate left trim in effect. Returns true if the left trim was
 	 * present.
-	 */
+	 *//*
 	private boolean deliberateLeftTrim() {
 		boolean result = false;
 		for (TemplateElement elem = this.nextTerminalNode(); elem != null
@@ -190,12 +190,12 @@ public final class TextBlock extends TemplateElement {
 		if (result) {
 		}
 		return result;
-	}
+	}*/
 
 	/**
 	 * Checks for the presence of a t or rt directive on the same line. Returns
 	 * true if the right trim directive was present.
-	 */
+	 *//*
 	private boolean deliberateRightTrim() {
 		boolean result = false;
 		for (TemplateElement elem = this.prevTerminalNode(); elem != null
@@ -255,12 +255,12 @@ public final class TextBlock extends TemplateElement {
 		}
 		return result;
 	}
-
+*/
 	/*
 	 * private String leftTrim(String s) { int i =0; while (i<s.length()) { if
 	 * (!Character.isWhitespace(s.charAt(i))) break; ++i; } return
 	 * s.substring(i); }
-	 */
+	 *//*
 	private int firstNewLineIndex() {
 		String content = new String(text);
 		int newlineIndex1 = content.indexOf('\n');
@@ -280,7 +280,7 @@ public final class TextBlock extends TemplateElement {
 	/**
 	 * figures out how many opening whitespace characters to strip in the
 	 * post-parse cleanup phase.
-	 */
+	 *//*
 	private int openingCharsToStrip() {
 		int newlineIndex = firstNewLineIndex();
 		if (newlineIndex == -1 && beginColumn != 1) {
@@ -311,7 +311,7 @@ public final class TextBlock extends TemplateElement {
 	/**
 	 * figures out how many trailing whitespace characters to strip in the
 	 * post-parse cleanup phase.
-	 */
+	 *//*
 	private int trailingCharsToStrip() { 
         String content = new String(text); 
         int lastNewlineIndex = lastNewLineIndex(); 
@@ -430,4 +430,4 @@ public final class TextBlock extends TemplateElement {
 	}
 
 	
-}
+}*/

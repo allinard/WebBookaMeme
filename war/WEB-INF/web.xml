@@ -19,7 +19,7 @@
 		<listener-class>com.atal.bookameme.listener.Struts2ListenerOnGAE</listener-class>
 	</listener>
 	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>planning.html</welcome-file>
 	</welcome-file-list>
 
 
