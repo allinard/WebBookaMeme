@@ -26,42 +26,15 @@ public class RepasDAO {
 	public static void createOrUpdateRepas(Repas repas) {
 		Entity storedRepas = getEntity(repas);
 		// create
-		/*if (storedRepas == null) {
-			storedRepas = new Entity("RecetteId", NEXTID);
+		if (storedRepas == null) {
+			storedRepas = new Entity("RepasId", NEXTID);
 			NEXTID++;
-			
-			storedRecette.setProperty("RecetteIngredients", recette
-					.getIngredients().replaceAll("\'", " "));
-			storedRecette.setProperty("RecetteBudget", recette.getBudget());
-			storedRecette.setProperty("RecetteCreePar", recette.getCreePar());
-			storedRecette.setProperty("RecetteIndiceFacilite",
-					recette.getIndiceFacilite());
-			storedRecette.setProperty("RecetteModePreparation", recette
-					.getModePreparation().replaceAll("\'", " "));
-			storedRecette.setProperty("RecettePhotoLink",
-					recette.getPhotoLink());
-			storedRecette.setProperty("RecetteTempsCuisson",
-					recette.getTempsCuisson());
-			storedRecette.setProperty("RecetteTempsPrepa",
-					recette.getTempsPrepa());
-		}
+		}	
 		// update
-		else {
-			storedRecette.setProperty("RecetteIngredients", recette
-					.getIngredients().replaceAll("\'", " "));
-			storedRecette.setProperty("RecetteBudget", recette.getBudget());
-			storedRecette.setProperty("RecetteCreePar", recette.getCreePar());
-			storedRecette.setProperty("RecetteIndiceFacilite",
-					recette.getIndiceFacilite());
-			storedRecette.setProperty("RecetteModePreparation", recette
-					.getModePreparation().replaceAll("\'", " "));
-			storedRecette.setProperty("RecettePhotoLink",
-					recette.getPhotoLink());
-			storedRecette.setProperty("RecetteTempsCuisson",
-					recette.getTempsCuisson());
-			storedRecette.setProperty("RecetteTempsPrepa",
-					recette.getTempsPrepa());
-		}*/
+		storedRepas.setProperty("RepasEntree", repas.getEntree());
+		storedRepas.setProperty("RepasPlat", repas.getPlat());
+		storedRepas.setProperty("RepasDessert", repas.getDessert());
+		storedRepas.setProperty("RepasCalories", repas.getCalories());
 		// persist
 		Util.persistEntity(storedRepas);
 	}
@@ -74,7 +47,7 @@ public class RepasDAO {
 	 * @return products
 	 */
 	public static Iterable<Entity> getAllEntities() {
-		return Util.listEntities("RecetteId", null, null);
+		return Util.listEntities("RepasId", null, null);
 	}
 
 	/**
@@ -100,26 +73,21 @@ public class RepasDAO {
 	 *            : product to be deleted
 	 * @return status string
 	 */
-	public static String deleteRecette(Recette recette) {
-		Key key = KeyFactory.createKey("RecetteId", recette.getId());
+	public static String deleteRepas(Repas repas) {
+		Key key = KeyFactory.createKey("RepasId", repas.getId());
 		Util.deleteEntity(key);
-		return "Recette deleted successfully";
+		return "Repas deleted successfully";
 	}
 
-	private static Recette getRecette(Entity e) {
-		Recette recette = new Recette();
-		recette.setId((int) e.getKey().getId());
-			
-		recette.setBudget((int) e.getProperty("RecetteBudget"));
-		recette.setCreePar((int) e.getProperty("RecetteCreePar"));
-		recette.setIndiceFacilite((int) e.getProperty("RecetteIndiceFacilite"));
-		recette.setIngredients((String) e.getProperty("RecetteIngredients"));
-		recette.setModePreparation((String) e.getProperty("RecetteModePreparation"));
-		recette.setPhotoLink((String) e.getProperty("RecettePhotoLink"));
-		recette.setTempsCuisson((int) e.getProperty("RecetteTempsCuisson"));
-		recette.setTempsPrepa((int) e.getProperty("RecetteTempsPrepa"));
+	private static Repas getRepas(Entity e) {
+		Repas repas = new Repas();
+		repas.setId((int) e.getKey().getId());
+		repas.setEntree((Recette) e.getProperty("RepasEntree"));
+		repas.setPlat((Recette) e.getProperty("RepasPlat"));
+		repas.setDessert((Recette) e.getProperty("RepasDessert"));
+		repas.setCalories((int) e.getProperty("RepasCalories"));
 		
-		return recette;
+		return repas;
 	}
 
 	/**
@@ -127,14 +95,14 @@ public class RepasDAO {
 	 * 
 	 * @return la liste de toutes les recettes en cours
 	 */
-	public static List<Recette> getAllRecettes() {
-		List<Recette> listeRecette = new ArrayList<Recette>();
-		Set<Recette> tempListe = new TreeSet<Recette>();
+	public static List<Repas> getAllRepas() {
+		List<Repas> listeRepas = new ArrayList<Repas>();
+		Set<Repas> tempListe = new TreeSet<Repas>();
 		for (Entity entity : getAllEntities()) {
-			tempListe.add(getRecette(entity));
+			tempListe.add(getRepas(entity));
 		}
-		listeRecette.addAll(tempListe);
-		return listeRecette;
+		listeRepas.addAll(tempListe);
+		return listeRepas;
 	}
 
 	/**
@@ -144,54 +112,22 @@ public class RepasDAO {
 	 *            l'ID de l'recette a supprimer
 	 * @return Success ou non
 	 */
-	public static String deleteRecetteWithId(int recetteId) {
-		Key key = KeyFactory.createKey("RecetteId", recetteId);
+	public static String deleteRepasWithId(int repasId) {
+		Key key = KeyFactory.createKey("RepasId", repasId);
 		Util.deleteEntity(key);
-		return "Recette deleted successfully";
+		return "Repas deleted successfully";
 	}
 
 	public static int nextId() {
-		List<Recette> listeRecettes = getAllRecettes();
+		List<Repas> listeRepas = getAllRepas();
 		int plusGrand = 0;
 
-		for (Recette recette : listeRecettes) {
-			if (recette.getId() > plusGrand) {
-				plusGrand = recette.getId();
+		for (Repas repas: listeRepas) {
+			if (repas.getId() > plusGrand) {
+				plusGrand = repas.getId();
 			}
 		}
 
 		return plusGrand + 1;
-	}
-	
-
-	private static Iterable<Entity> getByIngredients(String ingredients) {
-		return Util.listEntities("RecetteId", "RecetteIngredients", ingredients);
-	}
-
-	
-	public static List<Recette> getRecetteByAdresse(String ingredients) {
-		List<Recette> listeRecette = new ArrayList<Recette>();
-		Set<Recette> tempListe = new TreeSet<Recette>();
-		for (Entity entity : getByIngredients(ingredients)) {
-			tempListe.add(getRecette(entity));
-		}
-		listeRecette.addAll(tempListe);
-		return listeRecette;
-	}
-	
-	
-	private static Iterable<Entity> getByFacilite(String facilite) {
-		return Util.listEntities("RecetteId", "RecetteIndiceFacilite", facilite);
-	}
-
-	
-	public static List<Recette> getRecetteByFacilite(String facilite) {
-		List<Recette> listeRecette = new ArrayList<Recette>();
-		Set<Recette> tempListe = new TreeSet<Recette>();
-		for (Entity entity : getByFacilite(facilite)) {
-			tempListe.add(getRecette(entity));
-		}
-		listeRecette.addAll(tempListe);
-		return listeRecette;
 	}
 }

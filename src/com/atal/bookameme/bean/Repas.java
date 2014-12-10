@@ -1,35 +1,44 @@
 package com.atal.bookameme.bean;
 
 public class Repas {
-	private String entree;
-	private String plat;
-	private String dessert;
-	private String id;
+	private Recette entree;
+	private Recette plat;
+	private Recette dessert;
+	
+	private int calories;
+	
+	private int id;
 	
 	
-	public String getEntree() {
+	public Recette getEntree() {
 		return entree;
 	}
-	public void setEntree(String entree) {
+	public void setEntree(Recette entree) {
 		this.entree = entree;
 	}
-	public String getPlat() {
+	public Recette getPlat() {
 		return plat;
 	}
-	public void setPlat(String plat) {
+	public void setPlat(Recette plat) {
 		this.plat = plat;
 	}
-	public String getDessert() {
+	public Recette getDessert() {
 		return dessert;
 	}
-	public void setDessert(String dessert) {
+	public void setDessert(Recette dessert) {
 		this.dessert = dessert;
 	}
-	public String getId() {
+	public int getId() {
 		return this.id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
+	}
+	public int getCalories() {
+		return calories;
+	}
+	public void setCalories(int calories) {
+		this.calories = calories;
 	}
 	
 	
