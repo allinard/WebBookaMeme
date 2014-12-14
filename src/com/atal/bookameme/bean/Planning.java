@@ -2,28 +2,28 @@ package com.atal.bookameme.bean;
 
 public class Planning {
 	private String date;
-	private String petitDejeuner;
-	private String dejeuner;
-	private String diner;
+	private Repas petitDejeuner;
+	private Repas dejeuner;
+	private Repas diner;
 	private int id;
 	
 	
-	public String getPetitDejeuner() {
+	public Repas getPetitDejeuner() {
 		return petitDejeuner;
 	}
-	public void setPetitDejeuner(String petitDejeuner) {
+	public void setPetitDejeuner(Repas petitDejeuner) {
 		this.petitDejeuner = petitDejeuner;
 	}
-	public String getDejeuner() {
+	public Repas getDejeuner() {
 		return dejeuner;
 	}
-	public void setDejeuner(String dejeuner) {
+	public void setDejeuner(Repas dejeuner) {
 		this.dejeuner = dejeuner;
 	}
-	public String getDiner() {
+	public Repas getDiner() {
 		return diner;
 	}
-	public void setDiner(String diner) {
+	public void setDiner(Repas diner) {
 		this.diner = diner;
 	}
 	public int getId() {

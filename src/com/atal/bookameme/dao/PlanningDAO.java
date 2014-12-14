@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import com.atal.bookameme.bean.Planning;
+import com.atal.bookameme.bean.Repas;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
@@ -86,9 +87,9 @@ public class PlanningDAO {
 		planning.setId((int) e.getKey().getId());
 			
 		planning.setDate((String) e.getProperty("PlanningDate"));
-		planning.setPetitDejeuner((String) e.getProperty("PlanningPetitDejeuner"));
-		planning.setDejeuner((String) e.getProperty("PlanningDejeuner"));
-		planning.setDiner((String) e.getProperty("PlanningDiner"));
+		planning.setPetitDejeuner((Repas) e.getProperty("PlanningPetitDejeuner"));
+		planning.setDejeuner((Repas) e.getProperty("PlanningDejeuner"));
+		planning.setDiner((Repas) e.getProperty("PlanningDiner"));
 				
 		return planning;
 	}
