@@ -36,7 +36,8 @@ public class RecetteDAO {
 		if (storedRecette == null) {
 			storedRecette = new Entity("RecetteId", NEXTID);
 			NEXTID++;
-			
+			storedRecette.setProperty("RecetteNomRecette", recette
+					.getModePreparation().replaceAll("\'", " "));
 			storedRecette.setProperty("RecetteIngredients", recette
 					.getIngredients().replaceAll("\'", " "));
 			storedRecette.setProperty("RecetteBudget", recette.getBudget());
@@ -54,6 +55,8 @@ public class RecetteDAO {
 		}
 		// update
 		else {
+			storedRecette.setProperty("RecetteNomRecette", recette
+					.getModePreparation().replaceAll("\'", " "));
 			storedRecette.setProperty("RecetteIngredients", recette
 					.getIngredients().replaceAll("\'", " "));
 			storedRecette.setProperty("RecetteBudget", recette.getBudget());
@@ -125,6 +128,7 @@ public class RecetteDAO {
 		recette.setPhotoLink((String) e.getProperty("RecettePhotoLink"));
 		recette.setTempsCuisson((int) e.getProperty("RecetteTempsCuisson"));
 		recette.setTempsPrepa((int) e.getProperty("RecetteTempsPrepa"));
+		recette.setNomRecette((String)e.getProperty("RecetteNomRecette"));
 		
 		return recette;
 	}

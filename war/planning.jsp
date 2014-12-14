@@ -3,6 +3,9 @@
 <%@ page import="com.google.appengine.api.users.User" %>
 <%@ page import="com.google.appengine.api.users.UserService" %>
 <%@ page import="com.google.appengine.api.users.UserServiceFactory" %>
+<%@ page import="java.util.GregorianCalendar" %>
+<%@ page import="java.util.Calendar" %>
+<%@ page import="java.util.Date" %>
 
 
 <!DOCTYPE html>
@@ -36,6 +39,16 @@
     	  function init() {
 		  
 			<%
+			final Calendar date = new GregorianCalendar();
+		    date.setTime(new Date());
+		 
+		//ici on va juste décrementer la date jusqu'a tomber sur le premier jour de la semaine.
+		    while (date.get(Calendar.DAY_OF_WEEK) != Calendar.MONDAY) {
+		         date.add(Calendar.DAY_OF_WEEK,-1);
+		    }
+			
+		Calendar date2 = (Calendar)date.clone();
+		
 			UserService userService = UserServiceFactory.getUserService();
 			User user = userService.getCurrentUser();
 			if(user==null){
@@ -99,7 +112,7 @@
 			<center>
 			<ul class="pagination">
 				<li><a href="#"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>
-				<li><a href="#">Planning du 24/11 au 30/11</a></li>
+				<li><a href="#">Planning du <%= date2.get(Calendar.DAY_OF_MONTH) %>/<%= date2.get(Calendar.MONTH)+1 %> <% date2.add(Calendar.DAY_OF_WEEK,6); %> au <%= date2.get(Calendar.DAY_OF_MONTH) %>/<%= date2.get(Calendar.MONTH)+1 %></a></li>
 				<li><a href="#"><span aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>
 			  </ul>
 			  </center>
@@ -109,55 +122,23 @@
 
 		<div>
 			<ul class="nav nav-tabs">
-			  <li role="presentation" class="active"><a data-toggle="tab" href="#lundi">Lundi 24</a></li>
-			  <li role="presentation"><a data-toggle="tab" href="#mardi">Mardi 25</a></li>
-			  <li role="presentation"><a data-toggle="tab" href="#mercredi">Mercredi 26</a></li>
-			  <li role="presentation"><a data-toggle="tab" href="#jeudi">Jeudi 27</a></li>
-			  <li role="presentation"><a data-toggle="tab" href="#vendredi">Vendredi 28</a></li>
-			  <li role="presentation"><a data-toggle="tab" href="#samedi">Samedi 29</a></li>
-			  <li role="presentation"><a data-toggle="tab" href="#dimanche">Dimanche 30</a></li>
+			  <li role="presentation" class="active"><a data-toggle="tab" href="#lundi">Lundi <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
+			  <li role="presentation"><a data-toggle="tab" href="#mardi">Mardi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
+			  <li role="presentation"><a data-toggle="tab" href="#mercredi">Mercredi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
+			  <li role="presentation"><a data-toggle="tab" href="#jeudi">Jeudi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
+			  <li role="presentation"><a data-toggle="tab" href="#vendredi">Vendredi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
+			  <li role="presentation"><a data-toggle="tab" href="#samedi">Samedi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
+			  <li role="presentation"><a data-toggle="tab" href="#dimanche">Dimanche  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
 			</ul>
 
 			<div class="tab-content">
-				<div class="tab-pane active in" id="lundi">
-					<h4>
-						Petit D&eacute;jeuner &nbsp;
-						<a href="#" title="Modifier Ã  la main">
-							<span class="label label-success">
-								<span class="glyphicon glyphicon-pencil"></span>
-							</span>
-						</a> &nbsp;
-						<a href="#" title="Charger un nouveau repas">
-							<span class="label" style="background-color: #428BCA;">
-								<span class="glyphicon glyphicon-refresh"></span>
-							</span>
-						</a>
-					</h4>
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="panel panel-default">
-							  <div class="panel-heading">
-								<h3 class="panel-title">Boissons</h3>
-							  </div>
-							  <div class="panel-body">
-								Items ...
-							  </div>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="panel panel-default">
-							  <div class="panel-heading">
-								<h3 class="panel-title">Accompagnements</h3>
-							  </div>
-							  <div class="panel-body">
-								Items ...
-							  </div>
-							</div>
-						</div>
-					</div>
-					<hr>
-
-					
+				<div class="tab-pane active in" id="lundi">					
 					<h4>
 						D&eacute;jeuner &nbsp;
 						<a href="#" title="Modifier &agrave; la main">

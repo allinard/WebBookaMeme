@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import com.atal.bookameme.bean.Planning;
+import com.atal.bookameme.bean.Recette;
 import com.atal.bookameme.bean.Repas;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
@@ -141,5 +142,18 @@ public class PlanningDAO {
 	private static Iterable<Entity> getByDate(String date) {
 		return Util.listEntities("PlanningId", "PlanningDate", date);
 	}
+	
+	public static List<Planning> getRecetteByUserAndDate(String user, String date) {
+		List<Planning> listePlanning = new ArrayList<Planning>();
+		Set<Planning> tempListe = new TreeSet<Planning>();
+		for (Entity entity : getByDate(date)) {
+			if(getPlanning(entity).getUser().equals(user)){
+				tempListe.add(getPlanning(entity));
+			}
+		}
+		listePlanning.addAll(tempListe);
+		return listePlanning;
+	}
+
 	
 }

@@ -66,7 +66,7 @@
 		  
           <ul class="nav navbar-nav navbar-right">
             <s:if test="user!=null">
-            <li><a href="#">Planning des Repas</a></li>
+            <li><a href="planning.action">Planning des Repas</a></li>
             <li><a href="gestionProfilNutri.action">Profil Nutritionnel</a></li>
             </s:if>
             <li><a href="contact.action">Contact</a></li>

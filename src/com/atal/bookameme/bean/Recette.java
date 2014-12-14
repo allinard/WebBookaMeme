@@ -25,6 +25,8 @@ public class Recette implements Comparable<Recette> {
 	private int creePar;
 	
 	private String photoLink;
+	
+	private String nomRecette;
 
 	
 	@Override
@@ -121,6 +123,16 @@ public class Recette implements Comparable<Recette> {
 
 	public void setPhotoLink(String photoLink) {
 		this.photoLink = photoLink;
+	}
+
+
+	public String getNomRecette() {
+		return nomRecette;
+	}
+
+
+	public void setNomRecette(String nomRecette) {
+		this.nomRecette = nomRecette;
 	}
 	
 	
