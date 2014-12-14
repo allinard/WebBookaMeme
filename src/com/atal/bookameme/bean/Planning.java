@@ -6,6 +6,8 @@ public class Planning {
 	private Repas dejeuner;
 	private Repas diner;
 	private int id;
+	private String user;
+
 	
 	
 	public Repas getPetitDejeuner() {
@@ -37,6 +39,12 @@ public class Planning {
 	}
 	public void setDate(String date) {
 		this.date = date;
+	}
+	public String getUser() {
+		return user;
+	}
+	public void setUser(String user) {
+		this.user = user;
 	}
 	
 	

@@ -37,6 +37,8 @@ public class PlanningDAO {
 		storedPlanning.setProperty("PlanningDejeuner", planning.getDejeuner());
 		storedPlanning.setProperty("PlanningDiner",
 				planning.getDiner());
+		storedPlanning.setProperty("PlanningUser",
+				planning.getUser());
 		
 		// persist
 		Util.persistEntity(storedPlanning);
@@ -87,6 +89,7 @@ public class PlanningDAO {
 		planning.setId((int) e.getKey().getId());
 			
 		planning.setDate((String) e.getProperty("PlanningDate"));
+		planning.setUser((String) e.getProperty("PlanningUser"));
 		planning.setPetitDejeuner((Repas) e.getProperty("PlanningPetitDejeuner"));
 		planning.setDejeuner((Repas) e.getProperty("PlanningDejeuner"));
 		planning.setDiner((Repas) e.getProperty("PlanningDiner"));
