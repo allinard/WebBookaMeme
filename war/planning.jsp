@@ -273,8 +273,12 @@
 			</div>
 		</div>
 
-
-
+		<br>
+		<hr>
+			<center>
+			<a href="http://www.dpt-info.univ-nantes.fr/1326208903095/0/fiche___pagelibre/" target="_blank">Master 2 ATAL</a> - <a href="http://univ-nantes.fr" target="_blank">Universit&eacute; de Nantes</a><br>
+			Code source de l'application disponible sur <a href="https://github.com/allinard/WebBookaMeme">GitHub</a>
+			</center>
 
     </div>
 

@@ -21,7 +21,13 @@
 
 		<default-action-ref name="login" />
 		<action name="login" class="com.atal.bookameme.action.LoginAction">
-			<result name="success">planning.html</result>
+			<result name="success">redirect.jsp</result>
+		</action>
+		<action name="planning" class="com.atal.bookameme.action.PlanningAction">
+			<result name="success">planning.jsp</result>
+		</action>
+		<action name="index" class="com.atal.bookameme.action.IndexAction">
+			<result name="success">index.jsp</result>
 		</action>
 		<action name="gestionAlimentsExclus" class="com.atal.bookameme.action.GestionAlimentsExclusAction">
 			<result name="success">gestionAlimentsExclus.jsp</result>

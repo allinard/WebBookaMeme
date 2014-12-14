@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Nant'Alertes</title>
+    <title>Book &Agrave; M&eacute;m&eacute;</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +28,15 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+	<script type="text/javascript">
+    	  function init() {
+		  
+			<%
+			UserService userService = UserServiceFactory.getUserService();
+			User user = userService.getCurrentUser();
+			%>
+    	  }
+	</script>
   </head>
 
   <body onload="document.getElementById('basicMap').style.height=((document.getElementById('sidebar').offsetHeight-document.getElementById('navbar').offsetHeight)+'px');init();" onresize="document.getElementById('basicMap').style.height=((document.getElementById('sidebar').offsetHeight-document.getElementById('navbar').offsetHeight)+'px');">
@@ -42,7 +50,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" style="color:rgb(140,184,224);"><img height="40px" style="margin-top:-10px;" src="img/logo.png"></a>
+          <a class="navbar-brand" href="#" style="color:white;">Book &Agrave; M&eacute;m&eacute;</a>
         </div>
 
       </div>
@@ -50,25 +58,32 @@
 
     <div class="container">
 		<div class="page-header">
-			<h1>Bienvenue sur Book à Mémé!<!-- <img src="img/logo2.png" height="67px" style="margin-top:-6px;"> --></h1>
+			<h1>Bienvenue sur Book à Mémé!</h1>
 		</div>
 		<div class="lead">
 			Envie de manger équilibré ?
-			Bienvenue sur Book à Mémé!
+			Bienvenue sur Book à Mémé !
 		</div>
 		<p>
 			<center>
-				<s:actionerror />
-					<table>
-						<tr>
-							<td>
-								<a href="<%= UserServiceFactory.getUserService().createLoginURL("/map.action") %>" class="btn btn-lg btn-success btn-nav">Se Connecter</a>&nbsp;&nbsp;
-							</td>
-							<td>
-				    			&nbsp;&nbsp;<a href="/map.action" class="btn btn-lg btn-primary">Continuer</a>
-							</td>
-						</tr>
-					</table>
+          	<s:if test="user==null">
+		    	<a href="<%=userService.createLoginURL("/planning.action")%>" class="btn btn-lg btn-success">Connexion</a>
+          	</s:if>
+          	<s:else>
+	          	<span class="badge"><span class="glyphicon glyphicon-user" style="font-size:60px;"></span></span><br>
+	          	<span style="font-size:22px;"><%=user%></span>
+	          	<br><br>
+	          	<table>
+	          		<td>
+	          			<tr>
+	          				<a href="<%= userService.createLogoutURL("/index.action")%>" class="btn btn-lg btn-default">D&eacute;connexion</a>
+	          			</tr>
+	          			<tr>
+	           				&nbsp;&nbsp;<a href="planning.action" class="btn btn-lg btn-primary">Continuer</a>
+	          			</tr>
+	          		</td>
+	          	</table>
+          	</s:else>
 				    
 				<p></p>
 				<br>
