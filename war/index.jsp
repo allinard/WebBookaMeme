@@ -50,9 +50,32 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" style="color:white;">Book &Agrave; M&eacute;m&eacute;</a>
+          <a class="navbar-brand" href="#" style="color:white;"><strong>Book &Agrave; M&eacute;m&eacute;</strong></a>
         </div>
-
+       <div class="navbar-collapse collapse">
+		  
+          <form class="navbar-form navbar-right">
+          	<s:if test="user==null">
+		    <a href="<%=userService.createLoginURL("/planning.action")%>" class="btn btn-success">Connexion</a>
+          	</s:if>
+          	<s:else>
+		    <a href="<%= userService.createLogoutURL("/index.action")%>" class="btn btn-danger">D&eacute;connexion</a>
+          	</s:else>
+            <!--<input type="text" class="form-control" placeholder="Search...">-->
+          </form>
+		  
+          <ul class="nav navbar-nav navbar-right">
+            <s:if test="user!=null">
+            <li><a href="#">Planning des Repas</a></li>
+            <li><a href="gestionProfilNutri.action">Profil Nutritionnel</a></li>
+            </s:if>
+            <li><a href="contact.action">Contact</a></li>
+            <s:if test="user!=null">
+              <li class="active_link" ><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<%=user%></a></li>
+          	</s:if>
+          </ul>
+		  
+        </div>
       </div>
     </div>
 

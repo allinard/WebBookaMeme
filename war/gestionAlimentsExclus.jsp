@@ -26,7 +26,15 @@
 <link href="css/theme.css" rel="stylesheet">
 
 <link href="css/typeahead.css" rel="stylesheet">
-
+	<script type="text/javascript">
+    	  function init() {
+		  
+			<%
+			UserService userService = UserServiceFactory.getUserService();
+			User user = userService.getCurrentUser();
+			%>
+    	  }
+	</script>
 </head>
 
 
@@ -47,13 +55,22 @@
         <div class="navbar-collapse collapse">
 		  
           <form class="navbar-form navbar-right">
-		    <button type="button" class="btn btn-success">Connexion</button>
+          	<s:if test="user==null">
+		    <a href="<%=userService.createLoginURL("/planning.action")%>" class="btn btn-success">Connexion</a>
+          	</s:if>
+          	<s:else>
+		    <a href="<%= userService.createLogoutURL("/index.action")%>" class="btn btn-danger">D&eacute;connexion</a>
+          	</s:else>
             <!--<input type="text" class="form-control" placeholder="Search...">-->
           </form>
 		  
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="planning.html">Planning des Repas</a></li>
+            <li><a href="planning.action">Planning des Repas</a></li>
             <li class="active_link"><a href="gestionProfilNutri.action">Profil Nutritionnel</a></li>
+            <li><a href="contact.action">Contact</a></li>
+            <s:if test="user!=null">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<%=user%></a></li>
+          	</s:if>
           </ul>
 		  
         </div>
@@ -100,6 +117,13 @@
 			</s:form>
 		</div>
 		
+		<br>
+		<hr>
+			<center>
+			<a href="http://www.dpt-info.univ-nantes.fr/1326208903095/0/fiche___pagelibre/" target="_blank">Master 2 ATAL</a> - <a href="http://univ-nantes.fr" target="_blank">Universit&eacute; de Nantes</a><br>
+			Code source de l'application disponible sur <a href="https://github.com/allinard/WebBookaMeme">GitHub</a>
+			</center>
+			<br>
 	</div>
 
 

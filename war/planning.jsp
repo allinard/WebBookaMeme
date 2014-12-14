@@ -38,6 +38,10 @@
 			<%
 			UserService userService = UserServiceFactory.getUserService();
 			User user = userService.getCurrentUser();
+			if(user==null){
+			    String redirectURL = "/index.action";
+			    response.sendRedirect(redirectURL);
+			}
 			%>
     	  }
 	</script>
@@ -71,6 +75,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="active_link" ><a href="#">Planning des Repas</a></li>
             <li><a href="gestionProfilNutri.action">Profil Nutritionnel</a></li>
+            <li><a href="contact.action">Contact</a></li>
             <s:if test="user!=null">
               <li><a href="#"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;<%=user%></a></li>
           	</s:if>
@@ -279,7 +284,7 @@
 			<a href="http://www.dpt-info.univ-nantes.fr/1326208903095/0/fiche___pagelibre/" target="_blank">Master 2 ATAL</a> - <a href="http://univ-nantes.fr" target="_blank">Universit&eacute; de Nantes</a><br>
 			Code source de l'application disponible sur <a href="https://github.com/allinard/WebBookaMeme">GitHub</a>
 			</center>
-
+			<br>
     </div>
 
 
