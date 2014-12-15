@@ -41,13 +41,14 @@
 			<%
 			final Calendar date = new GregorianCalendar();
 		    date.setTime(new Date());
-		 
+		 	
 		//ici on va juste décrementer la date jusqu'a tomber sur le premier jour de la semaine.
 		    while (date.get(Calendar.DAY_OF_WEEK) != Calendar.MONDAY) {
 		         date.add(Calendar.DAY_OF_WEEK,-1);
 		    }
 			
 		Calendar date2 = (Calendar)date.clone();
+		Calendar today = (Calendar)date.clone();
 		
 			UserService userService = UserServiceFactory.getUserService();
 			User user = userService.getCurrentUser();
@@ -122,26 +123,31 @@
 
 		<div>
 			<ul class="nav nav-tabs">
-			  <li role="presentation" class="active"><a data-toggle="tab" href="#lundi">Lundi <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <li role="presentation"<%if(today.equals(date)){ %> class="active"<%} %>><a data-toggle="tab" href="#lundi">Lundi <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
 			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
-			  <li role="presentation"><a data-toggle="tab" href="#mardi">Mardi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <li role="presentation"<%if(today.equals(date)){ %> class="active"<%} %>><a data-toggle="tab" href="#mardi">Mardi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
 			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
-			  <li role="presentation"><a data-toggle="tab" href="#mercredi">Mercredi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <li role="presentation"<%if(today.equals(date)){ %> class="active"<%} %>><a data-toggle="tab" href="#mercredi">Mercredi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
 			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
-			  <li role="presentation"><a data-toggle="tab" href="#jeudi">Jeudi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <li role="presentation"<%if(today.equals(date)){ %> class="active"<%} %>><a data-toggle="tab" href="#jeudi">Jeudi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
 			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
-			  <li role="presentation"><a data-toggle="tab" href="#vendredi">Vendredi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <li role="presentation"<%if(today.equals(date)){ %> class="active"<%} %>><a data-toggle="tab" href="#vendredi">Vendredi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
 			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
-			  <li role="presentation"><a data-toggle="tab" href="#samedi">Samedi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <li role="presentation"<%if(today.equals(date)){ %> class="active"<%} %>><a data-toggle="tab" href="#samedi">Samedi  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
 			  <% date.add(Calendar.DAY_OF_WEEK,1); %>
-			  <li role="presentation"><a data-toggle="tab" href="#dimanche">Dimanche  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
+			  <li role="presentation"<%if(today.equals(date)){ %> class="active"<%} %>><a data-toggle="tab" href="#dimanche">Dimanche  <%= date.get(Calendar.DAY_OF_MONTH) %>/<%= date.get(Calendar.MONTH)+1 %></a></li>
 			</ul>
 
 			<div class="tab-content">
 				<div class="tab-pane active in" id="lundi">					
 					<h4>
 						D&eacute;jeuner &nbsp;
-						<a href="#" title="Modifier &agrave; la main">
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('lundi11').innerHTML='<textarea>'+document.getElementById('lundi11').innerHTML+'</textarea>';
+							document.getElementById('lundi12').innerHTML='<textarea>'+document.getElementById('lundi12').innerHTML+'</textarea>';
+							document.getElementById('lundi13').innerHTML='<textarea>'+document.getElementById('lundi13').innerHTML+'</textarea>';
+							document.getElementById('lundi1').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
 							<span class="label label-success">
 								<span class="glyphicon glyphicon-pencil"></span>
 							</span>
@@ -158,7 +164,7 @@
 							  <div class="panel-heading">
 								<h3 class="panel-title">Entr&eacute;e</h3>
 							  </div>
-							  <div class="panel-body">
+							  <div class="panel-body" id="lundi11">
 								Items ...
 							  </div>
 							</div>
@@ -168,7 +174,7 @@
 							  <div class="panel-heading">
 								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
 							  </div>
-							  <div class="panel-body">
+							  <div class="panel-body" id="lundi12">
 								Items ...
 							  </div>
 							</div>
@@ -178,17 +184,24 @@
 							  <div class="panel-heading">
 								<h3 class="panel-title">Dessert</h3>
 							  </div>
-							  <div class="panel-body">
+							  <div class="panel-body" id="lundi13">
 								Items ...
 							  </div>
 							</div>
 						</div>
 					</div>
+					<div id="lundi1">
+					</div>
 					<hr>
 
 					<h4>
 						Diner &nbsp;
-						<a href="#" title="Modifier Ã  la main">
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('lundi21').innerHTML='<textarea>'+document.getElementById('lundi21').innerHTML+'</textarea>';
+							document.getElementById('lundi22').innerHTML='<textarea>'+document.getElementById('lundi22').innerHTML+'</textarea>';
+							document.getElementById('lundi23').innerHTML='<textarea>'+document.getElementById('lundi23').innerHTML+'</textarea>';
+							document.getElementById('lundi2').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
 							<span class="label label-success">
 								<span class="glyphicon glyphicon-pencil"></span>
 							</span>
@@ -205,7 +218,7 @@
 							  <div class="panel-heading">
 								<h3 class="panel-title">Entr&eacute;e</h3>
 							  </div>
-							  <div class="panel-body">
+							  <div class="panel-body" id="lundi21">
 								Items ...
 							  </div>
 							</div>
@@ -215,7 +228,7 @@
 							  <div class="panel-heading">
 								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
 							  </div>
-							  <div class="panel-body">
+							  <div class="panel-body" id="lundi22">
 								Items ...
 							  </div>
 							</div>
@@ -225,11 +238,14 @@
 							  <div class="panel-heading">
 								<h3 class="panel-title">Dessert</h3>
 							  </div>
-							  <div class="panel-body">
+							  <div class="panel-body" id="lundi23">
 								Items ...
 							  </div>
 							</div>
 						</div>
+					</div>
+					
+					<div id="lundi2">
 					</div>
 				</div>
 
