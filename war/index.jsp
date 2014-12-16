@@ -89,27 +89,23 @@
 		</div>
 		<p>
 			<center>
+	
           	<s:if test="user==null">
 		    	<a href="<%=userService.createLoginURL("/planning.action")%>" class="btn btn-lg btn-success">Connexion</a>
           	</s:if>
           	<s:else>
 	          	<span class="badge"><span class="glyphicon glyphicon-user" style="font-size:60px;"></span></span><br>
 	          	<span style="font-size:22px;"><%=user%></span>
-	          	<br><br>
-	          	<table>
-	          		<td>
-	          			<tr>
+	          	<br/><br/>
 	          				<a href="<%= userService.createLogoutURL("/index.action")%>" class="btn btn-lg btn-default">D&eacute;connexion</a>
-	          			</tr>
-	          			<tr>
+	          			&nbsp;&nbsp;
 	           				&nbsp;&nbsp;<a href="planning.action" class="btn btn-lg btn-primary">Continuer</a>
-	          			</tr>
-	          		</td>
-	          	</table>
+	          			
           	</s:else>
-				    
-				<p></p>
+				
 				<br>
+				<br>
+										<img src="http://tilwing.fr/Communaute/images/utilisateurs/Tilwing/Graphisme/dessins/bookameme.jpg" width="200px">
 				<br>
 				Il faut &ecirc;tre connect&eacute; pour utiliser le site.
 			<center>

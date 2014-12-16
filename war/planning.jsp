@@ -41,14 +41,14 @@
 			<%
 			final Calendar date = new GregorianCalendar();
 		    date.setTime(new Date());
-		 	
+
 		//ici on va juste décrementer la date jusqu'a tomber sur le premier jour de la semaine.
 		    while (date.get(Calendar.DAY_OF_WEEK) != Calendar.MONDAY) {
 		         date.add(Calendar.DAY_OF_WEEK,-1);
 		    }
-			
+
+			Calendar today = (Calendar)date.clone();
 		Calendar date2 = (Calendar)date.clone();
-		Calendar today = (Calendar)date.clone();
 		
 			UserService userService = UserServiceFactory.getUserService();
 			User user = userService.getCurrentUser();
@@ -162,6 +162,21 @@
 						<div class="col-sm-4">
 							<div class="panel panel-default">
 							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
 								<h3 class="panel-title">Entr&eacute;e</h3>
 							  </div>
 							  <div class="panel-body" id="lundi11">
@@ -172,6 +187,21 @@
 						<div class="col-sm-4">
 							<div class="panel panel-default">
 							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
 								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
 							  </div>
 							  <div class="panel-body" id="lundi12">
@@ -182,6 +212,21 @@
 						<div class="col-sm-4">
 							<div class="panel panel-default">
 							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
 								<h3 class="panel-title">Dessert</h3>
 							  </div>
 							  <div class="panel-body" id="lundi13">
@@ -216,6 +261,21 @@
 						<div class="col-sm-4">
 							<div class="panel panel-default">
 							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
 								<h3 class="panel-title">Entr&eacute;e</h3>
 							  </div>
 							  <div class="panel-body" id="lundi21">
@@ -226,6 +286,21 @@
 						<div class="col-sm-4">
 							<div class="panel panel-default">
 							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
 								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
 							  </div>
 							  <div class="panel-body" id="lundi22">
@@ -236,6 +311,21 @@
 						<div class="col-sm-4">
 							<div class="panel panel-default">
 							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
 								<h3 class="panel-title">Dessert</h3>
 							  </div>
 							  <div class="panel-body" id="lundi23">
@@ -250,27 +340,1208 @@
 				</div>
 
 				<div class="tab-pane" id="mardi">
-					nyahhh2
+										<h4>
+						D&eacute;jeuner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('mardi11').innerHTML='<textarea>'+document.getElementById('mardi11').innerHTML+'</textarea>';
+							document.getElementById('mardi12').innerHTML='<textarea>'+document.getElementById('mardi12').innerHTML+'</textarea>';
+							document.getElementById('mardi13').innerHTML='<textarea>'+document.getElementById('mardi13').innerHTML+'</textarea>';
+							document.getElementById('mardi1').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="mardi11">
+								Items mardi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="mardi12">
+								Items mardi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="mardi13">
+								Items mardi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div id="mardi1">
+					</div>
+					<hr>
+
+					<h4>
+						Diner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('mardi21').innerHTML='<textarea>'+document.getElementById('mardi21').innerHTML+'</textarea>';
+							document.getElementById('mardi22').innerHTML='<textarea>'+document.getElementById('mardi22').innerHTML+'</textarea>';
+							document.getElementById('mardi23').innerHTML='<textarea>'+document.getElementById('mardi23').innerHTML+'</textarea>';
+							document.getElementById('mardi2').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="mardi21">
+								Items mardi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="mardi22">
+								Items mardi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="mardi23">
+								Items mardi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="mardi2">
+					</div>
 				</div>
+
 
 				<div class="tab-pane" id="mercredi">
-					nyahhh3
+										<h4>
+						D&eacute;jeuner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('mercredi11').innerHTML='<textarea>'+document.getElementById('mercredi11').innerHTML+'</textarea>';
+							document.getElementById('mercredi12').innerHTML='<textarea>'+document.getElementById('mercredi12').innerHTML+'</textarea>';
+							document.getElementById('mercredi13').innerHTML='<textarea>'+document.getElementById('mercredi13').innerHTML+'</textarea>';
+							document.getElementById('mercredi1').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="mercredi11">
+								Items mercredi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="mercredi12">
+								Items mercredi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="mercredi13">
+								Items mercredi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div id="mercredi1">
+					</div>
+					<hr>
+
+					<h4>
+						Diner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('mercredi21').innerHTML='<textarea>'+document.getElementById('mercredi21').innerHTML+'</textarea>';
+							document.getElementById('mercredi22').innerHTML='<textarea>'+document.getElementById('mercredi22').innerHTML+'</textarea>';
+							document.getElementById('mercredi23').innerHTML='<textarea>'+document.getElementById('mercredi23').innerHTML+'</textarea>';
+							document.getElementById('mercredi2').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="mercredi21">
+								Items mercredi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="mercredi22">
+								Items mercredi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="mercredi23">
+								Items mercredi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="mercredi2">
+					</div>
 				</div>
 
+				
 				<div class="tab-pane" id="jeudi">
-					nyahhh4
+										<h4>
+						D&eacute;jeuner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('jeudi11').innerHTML='<textarea>'+document.getElementById('jeudi11').innerHTML+'</textarea>';
+							document.getElementById('jeudi12').innerHTML='<textarea>'+document.getElementById('jeudi12').innerHTML+'</textarea>';
+							document.getElementById('jeudi13').innerHTML='<textarea>'+document.getElementById('jeudi13').innerHTML+'</textarea>';
+							document.getElementById('jeudi1').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="jeudi11">
+								Items jeudi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="jeudi12">
+								Items jeudi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="jeudi13">
+								Items jeudi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div id="jeudi1">
+					</div>
+					<hr>
+
+					<h4>
+						Diner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('jeudi21').innerHTML='<textarea>'+document.getElementById('jeudi21').innerHTML+'</textarea>';
+							document.getElementById('jeudi22').innerHTML='<textarea>'+document.getElementById('jeudi22').innerHTML+'</textarea>';
+							document.getElementById('jeudi23').innerHTML='<textarea>'+document.getElementById('jeudi23').innerHTML+'</textarea>';
+							document.getElementById('jeudi2').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="jeudi21">
+								Items jeudi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="jeudi22">
+								Items jeudi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="jeudi23">
+								Items jeudi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="jeudi2">
+					</div>
 				</div>
 
+				
 				<div class="tab-pane" id="vendredi">
-					nyahhh5
+										<h4>
+						D&eacute;jeuner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('vendredi11').innerHTML='<textarea>'+document.getElementById('vendredi11').innerHTML+'</textarea>';
+							document.getElementById('vendredi12').innerHTML='<textarea>'+document.getElementById('vendredi12').innerHTML+'</textarea>';
+							document.getElementById('vendredi13').innerHTML='<textarea>'+document.getElementById('vendredi13').innerHTML+'</textarea>';
+							document.getElementById('vendredi1').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="vendredi11">
+								Items vendredi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="vendredi12">
+								Items vendredi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="vendredi13">
+								Items vendredi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div id="vendredi1">
+					</div>
+					<hr>
+
+					<h4>
+						Diner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('vendredi21').innerHTML='<textarea>'+document.getElementById('vendredi21').innerHTML+'</textarea>';
+							document.getElementById('vendredi22').innerHTML='<textarea>'+document.getElementById('vendredi22').innerHTML+'</textarea>';
+							document.getElementById('vendredi23').innerHTML='<textarea>'+document.getElementById('vendredi23').innerHTML+'</textarea>';
+							document.getElementById('vendredi2').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="vendredi21">
+								Items vendredi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="vendredi22">
+								Items vendredi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="vendredi23">
+								Items vendredi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="vendredi2">
+					</div>
 				</div>
 
+				
 				<div class="tab-pane" id="samedi">
-					nyahhh6
+										<h4>
+						D&eacute;jeuner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('samedi11').innerHTML='<textarea>'+document.getElementById('samedi11').innerHTML+'</textarea>';
+							document.getElementById('samedi12').innerHTML='<textarea>'+document.getElementById('samedi12').innerHTML+'</textarea>';
+							document.getElementById('samedi13').innerHTML='<textarea>'+document.getElementById('samedi13').innerHTML+'</textarea>';
+							document.getElementById('samedi1').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="samedi11">
+								Items samedi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="samedi12">
+								Items samedi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="samedi13">
+								Items samedi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div id="samedi1">
+					</div>
+					<hr>
+
+					<h4>
+						Diner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('samedi21').innerHTML='<textarea>'+document.getElementById('samedi21').innerHTML+'</textarea>';
+							document.getElementById('samedi22').innerHTML='<textarea>'+document.getElementById('samedi22').innerHTML+'</textarea>';
+							document.getElementById('samedi23').innerHTML='<textarea>'+document.getElementById('samedi23').innerHTML+'</textarea>';
+							document.getElementById('samedi2').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="samedi21">
+								Items samedi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="samedi22">
+								Items samedi...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="samedi23">
+								Items samedi...
+							  </div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="samedi2">
+					</div>
 				</div>
 
+				
 				<div class="tab-pane" id="dimanche">
-					nyahhh7
+										<h4>
+						D&eacute;jeuner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('dimanche11').innerHTML='<textarea>'+document.getElementById('dimanche11').innerHTML+'</textarea>';
+							document.getElementById('dimanche12').innerHTML='<textarea>'+document.getElementById('dimanche12').innerHTML+'</textarea>';
+							document.getElementById('dimanche13').innerHTML='<textarea>'+document.getElementById('dimanche13').innerHTML+'</textarea>';
+							document.getElementById('dimanche1').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="dimanche11">
+								Items dimanche...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="dimanche12">
+								Items dimanche...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="dimanche13">
+								Items dimanche...
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div id="dimanche1">
+					</div>
+					<hr>
+
+					<h4>
+						Diner &nbsp;
+						<a href="#" title="Modifier &agrave; la main" onclick="
+							document.getElementById('dimanche21').innerHTML='<textarea>'+document.getElementById('dimanche21').innerHTML+'</textarea>';
+							document.getElementById('dimanche22').innerHTML='<textarea>'+document.getElementById('dimanche22').innerHTML+'</textarea>';
+							document.getElementById('dimanche23').innerHTML='<textarea>'+document.getElementById('dimanche23').innerHTML+'</textarea>';
+							document.getElementById('dimanche2').innerHTML='<button class=\'btn btn-success\'>Sauvegarder</button>';
+						">
+							<span class="label label-success">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</span>
+						</a> &nbsp;
+						<a href="#" title="Charger un nouveau repas">
+							<span class="label" style="background-color: #428BCA;">
+								<span class="glyphicon glyphicon-refresh"></span>
+							</span>
+						</a>
+					</h4>
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Entr&eacute;e</h3>
+							  </div>
+							  <div class="panel-body" id="dimanche21">
+								Items dimanche...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Plat de R&eacute;sistance</h3>
+							  </div>
+							  <div class="panel-body" id="dimanche22">
+								Items dimanche...
+							  </div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="panel panel-default">
+							  <div class="panel-heading">
+							  <span class="pull-right"><small>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-euro" style="color:silver;"></span>
+								    &nbsp;
+								    -
+								    &nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    <span class="glyphicon glyphicon-asterisk" style="color:silver;"></span>
+								    </small>
+								</span>
+								<h3 class="panel-title">Dessert</h3>
+							  </div>
+							  <div class="panel-body" id="dimanche23">
+								Items dimanche...
+							  </div>
+							</div>
+						</div>
+					</div>
+					
+					<div id="dimanche2">
+					</div>
 				</div>
 			</div>
 		</div>
@@ -278,6 +1549,13 @@
 		<br>
 		<hr>
 			<center>
+			 
+								    <span class="glyphicon glyphicon-euro"
+								style="color:rgb(75,75,75);"></span> : Budget
+								    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								    <span class="glyphicon glyphicon-asterisk"
+								style="color:rgb(75,75,75);"></span> : Calories
+								<br><br>
 			<a href="http://www.dpt-info.univ-nantes.fr/1326208903095/0/fiche___pagelibre/" target="_blank">Master 2 ATAL</a> - <a href="http://univ-nantes.fr" target="_blank">Universit&eacute; de Nantes</a><br>
 			Code source de l'application disponible sur <a href="https://github.com/allinard/WebBookaMeme">GitHub</a>
 			</center>
